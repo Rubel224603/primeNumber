@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Prime Number javascript</title>
+	<link rel="icon" href="me.jpg"/>
+
+</head>
+<body>
+	<input type="number" id="primeNumber" placeholder="Enter a Positive Number" />
+	<input type="button" id="btn" value="Check Prime Number" />
+	<h2 id="show"></h2>
+
+<script type="text/javascript">
+		document.getElementById("btn").addEventListener("click",function(){
+			
+			var inpNumber =document.querySelector("#primeNumber").value;
+			
+			var Prime = true;
+			
+			if(inpNumber === 1){
+				document.getElementById("show").innerHTML="1 Is not A Prime Number";
+			}else if(inpNumber > 1){
+				for(i =2; i<inpNumber;i++){
+					if(inpNumber % i==0){
+					Prime= false;
+					break;
+					}
+				}
+				
+				if(Prime){
+					document.getElementById("show").innerHTML=inpNumber+" Is  A Prime Number";
+	
+				}else{
+					document.getElementById("show").innerHTML=inpNumber+" Is not A Prime Number";
+
+				}
+			}else{
+			
+				document.getElementById("show").innerHTML=inpNumber+" Is not A Prime Number";
+
+			}
+			
+		
+		});
+		
+
+		
+
+
+</script>
+</body>
+</html>
